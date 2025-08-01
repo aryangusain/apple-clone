@@ -1,0 +1,28 @@
+import Button from "./ui/Button"
+import Heading from "./ui/Heading"
+import Subheading from "./ui/Subheading"
+
+const Card_3 = () => {
+  return (
+    <div className="
+      row-span-1 col-span-1
+      bg-[url('/card_3.jpg')] bg-cover bg-no-repeat bg-center h-[600px]
+      flex flex-col justify-between items-center
+      py-[60px]
+    "
+    >
+      <div className="flex flex-col gap-[10px] items-center text-center">
+        <Heading className="-mb-2">Macbook Air</Heading>
+        <Subheading className="text-xl">Sky blue color. <br />Sky high performace with M4.</Subheading>
+        <div className="flex gap-[10px] mt-2">
+            <Button variant="primary" className="text-sm px-4">Learn More</Button>
+            <Button variant="secondary" className="bg-transparent text-sm">Buy</Button>
+        </div>
+      </div> 
+      <div className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600">
+        Built for Apple Intelligence.
+      </div>
+    </div>
+  )
+}
+export default Card_3

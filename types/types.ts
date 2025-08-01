@@ -1,0 +1,2 @@
+type navbarMenuItemsI = {[key: string]: {categories: string[], subheadings: string[], menuItems: {[key: string]: string[]}}};
+type navbarMenuItemI = {categories: string[], subheadings: string[], menuItems: {[key: string]: string[]}};
