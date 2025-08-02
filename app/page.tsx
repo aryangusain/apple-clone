@@ -13,7 +13,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="text-text-primary flex justify-center items-center">
+    <div className="text-text-primary flex flex-col justify-center items-center">
       <div className="flex-col items-center w-full max-w-[2560px]">
         <Navbar />
         <Hero />
@@ -28,8 +28,8 @@ export default function Home() {
           <Card_6 />
         </div>
         <Gallery />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
