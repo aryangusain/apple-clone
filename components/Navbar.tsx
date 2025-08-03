@@ -105,21 +105,24 @@ const Navbar = () => {
     }
 
     return (
-        <div className="fixed w-full max-w-[2560px] bg-white z-10">
-            {/* For large screens */}
-            <div className="flex justify-center items-center gap-[20px] relative">
-                <Image src="/logo.png" width={20} height={20} alt="logo" className="cursor-pointer"/>
-                {/* {
-                    navbarItems.map((item, index) => {
-                        return <NavbarItem key={index} data={navbarMenuItems[item]}>{item}</NavbarItem>
-                    })
-                } */}
-                <IconSearch className="h-10 py-3 px-0 cursor-pointer text-text-muted"/>
-                <IconBriefcase2 className="h-10 py-3 px-0 cursor-pointer text-text-muted"/>
-            </div>
+            <div className="fixed w-full max-w-[2560px] bg-white z-10">
+                {/* For large screens */}
+                <div className="md:flex hidden justify-center items-center relative">
+                    <Image src="/logo.png" width={20} height={20} alt="logo" className="size-5 mr-2 cursor-pointer"/>
+                    {
+                        navbarItems.map((item, index) => {
+                            return <NavbarItem key={index} data={navbarMenuItems[item]}>{item}</NavbarItem>
+                        })
+                    }
+                    <IconSearch className="lg:h-[44px] md:h-[38px] lg:px-1 mr-2 py-3 cursor-pointer text-text-muted"/>
+                    <IconBriefcase2 className="lg:h-[44px] md:h-[38px] lg:px-1 py-3 cursor-pointer text-text-muted"/>
+                </div>
 
-            {/* For medium and small screens */}
-        </div>
+                {/* For medium and small screens */}
+                <div className="flex md:hidden">
+                    small screen nav
+                </div>
+            </div>
     )
 }
 export default Navbar

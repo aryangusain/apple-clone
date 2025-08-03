@@ -8,7 +8,7 @@ const NavbarItem = ({children, data}: {children: React.ReactNode, data: navbarMe
 
     return (
       <div className="bg-white">
-          <div onMouseOver={() => setOpen(true)} onMouseOut={() => setOpen(false)} className={`px-2 py-3 text-xs cursor-pointer ${open? " text-text-primary ": "  text-text-light "}`}>
+          <div onMouseOver={() => setOpen(true)} onMouseOut={() => setOpen(false)} className={`lg:px-[16px] px-[10px] py-3 text-xs cursor-pointer ${open? " text-text-primary ": "  text-text-light "}`}>
               {children}
           </div>
           <div className="absolute top-[40px] left-0 flex justify-start items-start w-full bg-white z-10">

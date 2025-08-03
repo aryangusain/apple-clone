@@ -9,7 +9,7 @@ const NavbarMenu = ({data, open, setOpen}: {data: navbarMenuItemI, open: boolean
 
     return (
         <div onMouseOver={() => setOpen(true)} onMouseOut={() => setOpen(false)} className={cn("w-full flex justify-center overflow-hidden transition-all duration-300", open? "opacity-100 h-auto": "opacity-0 h-0")}>
-            <div className="py-[40px] w-[950px] flex justify-start items-start gap-[60px] duration-300 transition-all">
+            <div className="py-[40px] lg:w-[870px] w-[710px] flex justify-start items-start gap-[60px] duration-300 transition-all">
                 <div className="flex flex-col gap-[8px]">
                     <NavbarMenuCategory>{data.categories[0]}</NavbarMenuCategory>
                     <div className="flex flex-col gap-[16px]">

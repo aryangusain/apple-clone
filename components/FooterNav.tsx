@@ -1,5 +1,7 @@
+import { IconChevronDown } from "@tabler/icons-react";
 import FooterNavHeading from "./ui/FooterNavHeading"
 import FooterNavItem from "./ui/FooterNavItem"
+import FooterNavMenu from "./ui/FooterNavMenu";
 
 const FooterNav = () => {
     const nav = [
@@ -50,95 +52,60 @@ const FooterNav = () => {
     ];
 
     return (
-        <div className="flex flex-nowrap w-full">
-            <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
-                {
-                    nav.slice(0, 2).map(({heading, items}, index) => {
-                        return (
-                            <div key={index} className="flex flex-col gap-[10px] mb-[22px]">
-                                <FooterNavHeading>{heading}</FooterNavHeading>
-                                <div className="flex flex-col gap-[10px]">
-                                    {
-                                        items.map((item, index) => {
-                                            return <FooterNavItem key={index}>{item}</FooterNavItem>
-                                        })
-                                    }
-                                </div>  
-                            </div>
-                        )
-                    })
-                }
+        <div className="w-full"> 
+            {/* Large Screen */}      
+            <div className="flex md:flex-row flex-col flex-nowrap w-full">
+                <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
+                    {
+                        nav.slice(0, 2).map(({heading, items}, index) => {
+                            return (
+                                <FooterNavMenu key={index} heading={heading} items={items} />
+                            )
+                        })
+                    }
+                </div>
+                <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
+                    {
+                        nav.slice(2, 4).map(({heading, items}, index) => {
+                            return (
+                                <FooterNavMenu key={index} heading={heading} items={items} />
+                            )
+                        })
+                    }
+                </div>
+                <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
+                    {
+                        nav.slice(4, 5).map(({heading, items}, index) => {
+                            return (
+                                <FooterNavMenu key={index} heading={heading} items={items} />
+                            )
+                        })
+                    }
+                </div>
+                <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
+                    {
+                        nav.slice(5, 9).map(({heading, items}, index) => {
+                            return (
+                                <FooterNavMenu key={index} heading={heading} items={items} />
+                            )
+                        })
+                    }
+                </div>
+                <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
+                    {
+                        nav.slice(9).map(({heading, items}, index) => {
+                            return (
+                                <FooterNavMenu key={index} heading={heading} items={items} />
+                            )
+                        })
+                    }
+                </div>
             </div>
-            <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
+
+            {/* Medium and Small Screen */}
+            <div className="flex md:hidden">
                 {
-                    nav.slice(2, 4).map(({heading, items}, index) => {
-                        return (
-                            <div key={index} className="flex flex-col gap-[10px] mb-[22px]">
-                                <FooterNavHeading>{heading}</FooterNavHeading>
-                                <div className="flex flex-col gap-[10px]">
-                                    {
-                                        items.map((item, index) => {
-                                            return <FooterNavItem key={index}>{item}</FooterNavItem>
-                                        })
-                                    }
-                                </div>  
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
-                {
-                    nav.slice(4, 5).map(({heading, items}, index) => {
-                        return (
-                            <div key={index} className="flex flex-col gap-[10px] mb-[22px]">
-                                <FooterNavHeading>{heading}</FooterNavHeading>
-                                <div className="flex flex-col gap-[10px]">
-                                    {
-                                        items.map((item, index) => {
-                                            return <FooterNavItem key={index}>{item}</FooterNavItem>
-                                        })
-                                    }
-                                </div>  
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
-                {
-                    nav.slice(5, 9).map(({heading, items}, index) => {
-                        return (
-                            <div key={index} className="flex flex-col gap-[10px] mb-[22px]">
-                                <FooterNavHeading>{heading}</FooterNavHeading>
-                                <div className="flex flex-col gap-[10px]">
-                                    {
-                                        items.map((item, index) => {
-                                            return <FooterNavItem key={index}>{item}</FooterNavItem>
-                                        })
-                                    }
-                                </div>  
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <div className="flex flex-col text-left items-start justify-start flex-1 pr-[10px]">
-                {
-                    nav.slice(9).map(({heading, items}, index) => {
-                        return (
-                            <div key={index} className="flex flex-col gap-[10px] mb-[22px]">
-                                <FooterNavHeading>{heading}</FooterNavHeading>
-                                <div className="flex flex-col gap-[10px]">
-                                    {
-                                        items.map((item, index) => {
-                                            return <FooterNavItem key={index}>{item}</FooterNavItem>
-                                        })
-                                    }
-                                </div>  
-                            </div>
-                        )
-                    })
+                    
                 }
             </div>
         </div>
