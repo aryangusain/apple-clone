@@ -13,13 +13,13 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="text-text-primary flex flex-col justify-center items-center">
+    <div className="text-text-primary flex flex-col justify-center items-center overflow-y-hidden">
       <div className="flex-col items-center w-full max-w-[2560px]">
         <Navbar />
         <Hero />
         <Hero_2 />
         <Hero_3 />
-        <div className="grid grid-rows-3 grid-cols-2 gap-[10px] px-[10px] py-[10px]">
+        <div className="grid md:grid-rows-3 md:grid-cols-2 grid-rows-1 grid-cols-1 gap-[10px] md:px-[10px] py-[10px]">
           <Card_1 />
           <Card_2 />
           <Card_3 />

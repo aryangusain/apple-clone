@@ -7,7 +7,7 @@ const variants = {
 
 const Button = ({className, children, variant}: {className?: string, children: React.ReactNode, variant: "primary" | "secondary"}) => {
   return (
-    <div className={cn("text-[17px] py-2 px-5 cursor-pointer rounded-full", variants[variant], className)}>{children}</div>
+    <div className={cn("md:text-[17px] text-[14px] py-2 md:px-5 px-4 cursor-pointer rounded-full", variants[variant], className)}>{children}</div>
   )
 }
 export default Button

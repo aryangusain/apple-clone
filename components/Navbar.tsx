@@ -109,11 +109,11 @@ const Navbar = () => {
             {/* For large screens */}
             <div className="flex justify-center items-center gap-[20px] relative">
                 <Image src="/logo.png" width={20} height={20} alt="logo" className="cursor-pointer"/>
-                {
+                {/* {
                     navbarItems.map((item, index) => {
                         return <NavbarItem key={index} data={navbarMenuItems[item]}>{item}</NavbarItem>
                     })
-                }
+                } */}
                 <IconSearch className="h-10 py-3 px-0 cursor-pointer text-text-muted"/>
                 <IconBriefcase2 className="h-10 py-3 px-0 cursor-pointer text-text-muted"/>
             </div>

@@ -3,25 +3,25 @@ import Note from "./ui/Note"
 
 const FooterLegal = () => {
   return (
-    <div className="flex flex-col w-full mt-[20px]">
-        <Note>More ways to shop: <a className="text-blue-500 underline"> Find an Apple Store </a> or <a className="text-blue-500 underline"> other retailer </a> near you. Or call <a className="text-blue-500 underline"> 1-800-MY-APPLE </a> (1-800-692-7753).</Note>
-        <div className="w-full bg-neutral-300 my-[20px]" style={{height: "1px"}}></div>
-        <div className="flex flex-col md:flex-row justify-between">
-            <div className="flex gap-[20px] items-center">
+    <div className="flex flex-col w-full mt-[20px] md:gap-0 gap-[10px]">
+        <Note>More ways to shop: <span className="text-blue-500 underline mx-1"> Find an Apple Store </span> or <span className="text-blue-500 underline mx-1"> other retailer </span> near you. Or call <span className="text-blue-500 underline mx-1"> 1-800-MY-APPLE </span> (1-800-692-7753).</Note>
+        <div className="w-full bg-neutral-300 md:my-[20px] md:h-px"></div>
+        <div className="flex flex-col-reverse md:flex-row justify-between md:gap-0 gap-[16px]">
+            <div className="flex md:flex-row flex-col gap-[6px] md:items-center items-start">
                 <Note>
                     Copyright © 2025 Apple Inc. All rights reserved.
                 </Note>
-                <div className="flex gap-[2px] divide-x divide-text-extralight">
-                    <FooterNavItem className="px-[6px]">Privacy Policy</FooterNavItem>
-                    <FooterNavItem className="px-[6px]">Terms of Use</FooterNavItem>
-                    <FooterNavItem className="px-[6px]">Sales and Refunds</FooterNavItem>
-                    <FooterNavItem className="px-[6px]">Legal</FooterNavItem>
-                    <FooterNavItem className="px-[6px]">Site Map</FooterNavItem>
+                <div className="flex flex-wrap divide-x gap-x-[9px] gap-y-[5px] divide-text-extralight">
+                    <FooterNavItem className="pr-[9px]">Privacy Policy</FooterNavItem>
+                    <FooterNavItem className="pr-[9px]">Terms of Use</FooterNavItem>
+                    <FooterNavItem className="pr-[9px]">Sales and Refunds</FooterNavItem>
+                    <FooterNavItem className="pr-[9px]">Legal</FooterNavItem>
+                    <FooterNavItem className="pr-[9px]">Site Map</FooterNavItem>
                 </div>
             </div>   
-            <Note>
+            <FooterNavItem className="text-left">
                 United States
-            </Note>
+            </FooterNavItem>
         </div>
     </div>
   )
