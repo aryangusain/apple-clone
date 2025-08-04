@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Apple Landing Page Clone
+
+This project is a fully responsive clone of the Apple website's landing page, built with Next.js. The goal of this project was to replicate the design, animations, and responsive behavior of the original Apple landing page.
+
+<img width="600" alt="Image" src="https://github.com/user-attachments/assets/8d6a6340-e557-4ee8-b1b7-456365d42157" />
+<img width="293" alt="Image" src="https://github.com/user-attachments/assets/737aaa52-13af-4d1f-8ed5-ae34640eacc6" />
+
+
+## Live Demo
+
+You can view a live demo of the project here:
+[Link](https://apple-clone-beta-five.vercel.app/)
+
+## Technologies Used
+
+- **Next.js**
+- **Typescript**
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to get the project up and running on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/aryangusain/apple-clone
+   ```
+2. **Navigate to project folder**
+   ```bash
+   cd apple-clone
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+4. **Run the project**
+   ```bash
+   npm run dev
+   ```
