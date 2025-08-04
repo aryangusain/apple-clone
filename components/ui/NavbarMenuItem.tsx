@@ -1,6 +1,8 @@
-const NavbarMenuItem = ({children}: {children: React.ReactNode}) => {
+import { cn } from "@/lib/utils"
+
+const NavbarMenuItem = ({children, className}: {children: React.ReactNode, className?: string}) => {
   return (
-    <div className="text-[13px] text-text-primary font-medium">{children}</div>
+    <div className={cn("text-[13px] text-text-primary font-medium", className)}>{children}</div>
   )
 }
 export default NavbarMenuItem

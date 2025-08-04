@@ -1,8 +1,14 @@
+"use client"
+
 import Image from "next/image"
 import NavbarItem from "./ui/NavbarItem"
-import { IconBriefcase2, IconSearch } from "@tabler/icons-react"
+import { IconBriefcase2, IconMenu, IconSearch, IconX } from "@tabler/icons-react"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 
 const Navbar = () => {
+    const [open , setOpen] = useState(false);
+
     const navbarItems: string[] = ["Store", "Mac", "iPad", "iPhone", "Watch", "Vision", "AirPods", "TV & Home", "Entertainment", "Accessories", "Support"]
     const navbarMenuItems: navbarMenuItemsI = {
         "Store": {
@@ -119,8 +125,21 @@ const Navbar = () => {
                 </div>
 
                 {/* For medium and small screens */}
-                <div className="flex md:hidden">
-                    small screen nav
+                <div className="flex md:hidden justify-between items-center px-[12px]">
+                    <Image src="/logo.png" width={20} height={20} alt="logo" className="size-6 mr-2 cursor-pointer"/>
+                    <div className="flex gap-[20px] items-center">
+                        <IconSearch className="h-[44px] py-3 cursor-pointer text-text-muted"/>
+                        <IconBriefcase2 className="h-[44px] py-3 cursor-pointer text-text-muted"/>
+                        <div className={cn("absolute top-0 left-0 w-full flex flex-col z-20 transition-all duration-400 overflow-hidden bg-white", open ? "opacity-100 h-screen py-[50px]" : "opacity-0 h-0 py-[0px]")}>
+                            {
+                                navbarItems.map((item, index) => {
+                                    return <NavbarItem key={index} data={navbarMenuItems[item]}>{item}</NavbarItem>
+                                })
+                            }
+                        </div>
+                        <IconMenu onClick={() => setOpen(true)} className={cn("h-[46px] py-3 cursor-pointer text-text-muted", open && "hidden")}/>
+                        <IconX onClick={() => setOpen(false)} className={cn("h-[46px] py-3 cursor-pointer text-text-muted z-30", !open && "hidden")}/>
+                    </div>
                 </div>
             </div>
     )

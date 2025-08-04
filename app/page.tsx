@@ -14,7 +14,7 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div className="text-text-primary flex flex-col justify-center items-center overflow-y-hidden">
-      <div className="flex-col items-center w-full max-w-[2560px]">
+      <div className="flex-col items-center w-full max-w-[2560px] relative">
         <Navbar />
         <Hero />
         <Hero_2 />

@@ -1,6 +1,8 @@
-const NavbarMenuCategory = ({children}: {children: React.ReactNode}) => {
+import { cn } from "@/lib/utils"
+
+const NavbarMenuCategory = ({children, className}: {children: React.ReactNode, className?: string}) => {
   return (
-    <div className="text-text-extralight text-xs">{children}</div>
+    <div className={cn("text-text-extralight text-xs", className)}>{children}</div>
   )
 }
 export default NavbarMenuCategory
